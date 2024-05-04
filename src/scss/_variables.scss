@@ -1,20 +1,19 @@
 $font-family: "Open Sans";
 
 // Set Type Scale
-$wght-extrbold: 900;
-$wght-semibold: 800;
+$wght-extrbold: 800;
 $wght-bold: 600;
 $wght-normal: 400;
 $wght-light: 300;
 
 // Colors
-$main_color: #0f519b;
+$main_color: #143768;
 $secondary_color: #bf1e2d;
+$accent-color: #eee;
 
+// Text
 $paragraph_color: #777;
 $paragraph_color2: #fff;
-
-$accent-color: #eee;
 
 // Screen Size map
 $screen-sizes: (
@@ -25,4 +24,32 @@ $screen-sizes: (
   "xl": 1200px,
   "xxl": 1400px,
   "xxxl": 1600px,
-)
+);
+
+h1 {
+  font-family: $font-family;
+  font-weight: $wght-extrbold;
+  font-size: var(--fz-1);
+}
+
+h2 {
+  font-family: $font-family;
+  font-weight: $wght-bold;
+  font-size: var(--fz-2);
+}
+
+h2 {
+  font-family: $font-family;
+  font-weight: $wght-bold;
+  font-size: var(--fz-3);
+}
+
+p {
+  font-family: $font-family;
+  font-weight: $wght-light;
+  font-size: var(--fz-4);
+
+  .p--small {
+    font-size: var(--fz-5);
+  }
+}

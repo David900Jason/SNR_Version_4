@@ -3,12 +3,17 @@
 @import "./mixins";
 @import "./reset";
 
+// Components
+@import "./button";
+
 // Header
 .header {
   background-color: #eee;
   padding-inline: min(12rem, 5vw);
   padding-block: 3.2em;
   position: sticky;
+  top: 0;
+  left: 0;
 
   display: flex;
   flex-direction: row;
@@ -40,7 +45,7 @@
     left: 50%;
     z-index: 99;
     width: 100%;
-    transform: translateX(-50%);
+    transform: translateX(50%);
     flex: 1;
 
     @include media-query("lg") {
@@ -89,7 +94,7 @@
 
   // Link
   &__item {
-    font-size: var(--fz-4);
+    font-size: var(--fz-5);
     font-weight: $wght-bold;
   }
 
@@ -101,6 +106,65 @@
 
     @include media-query("lg") {
       display: none;
+    }
+  }
+}
+
+// Main (Landing)
+.main {
+  min-height: calc(100vh - 12.2rem);
+
+  @include media-query("lg") {
+    min-height: calc(100vh - 10rem);
+  }
+
+  &--bg {
+    background: {
+      image: url("../assets/landing_page.jpg");
+      repeat: no-repeat;
+      position-x: center;
+      size: 100% 100%;
+      attachment: fixed;
+    }
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.6;
+    }
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    text-align: center;
+    margin-top: -20rem;
+    position: relative;
+    color: white;
+  }
+
+  &__title {
+    font-weight: $wght-bold;
+
+    span {
+      font-weight: $wght-extrbold;
+      letter-spacing: -10px;
+
+      &:nth-child(2n) {
+        color: $secondary_color;
+      }
+
+      &:first-child,
+      &:last-child {
+        color: $main_color;
+      }
     }
   }
 }

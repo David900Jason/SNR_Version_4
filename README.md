@@ -27,7 +27,7 @@ I also self-hosted this font-family to avoid internet connection conflicts
 Add Font family preview image here...
 
 ### Colors
-<!-- Add Colors palette herr... -->
+<!-- Add Colors palette here... -->
 
 ### Type Scale
 <!-- Add Type Scale here... -->
