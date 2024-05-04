@@ -1,0 +1,106 @@
+@import "./font";
+@import "./variables";
+@import "./mixins";
+@import "./reset";
+
+// Header
+.header {
+  background-color: #eee;
+  padding-inline: min(12rem, 5vw);
+  padding-block: 3.2em;
+  position: sticky;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3.2em;
+
+  z-index: 99;
+
+  @include media-query("lg") {
+    flex-direction: row;
+    padding-block: 0;
+    justify-content: space-between;
+    height: 10rem;
+  }
+
+  // Logo
+  &__logo {
+    width: 85px;
+    display: flex;
+    align-items: center;
+  }
+
+  // Links
+  &__links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 99;
+    width: 100%;
+    transform: translateX(-50%);
+    flex: 1;
+
+    @include media-query("lg") {
+      flex-direction: row;
+      position: static;
+      transform: none;
+      justify-content: end;
+      height: 100%;
+      gap: 3.2rem;
+    }
+  }
+
+  // Link
+  &__link {
+    $p: 2.5em;
+
+    text-align: center;
+    padding-block: $p;
+    display: flex;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: none;
+
+    background-color: $main_color;
+    color: white;
+
+    &:hover {
+      color: $secondary_color;
+    }
+
+    @include media-query("lg") {
+      align-items: center;
+      justify-content: unset;
+      background-color: transparent;
+      color: inherit;
+      padding-inline: 1.6em;
+      transform: translateX(0);
+
+      &:hover {
+        height: calc(100% - ($p * 2));
+        border-bottom: 3px solid $main_color;
+        color: $main_color;
+      }
+    }
+  }
+
+  // Link
+  &__item {
+    font-size: var(--fz-4);
+    font-weight: $wght-bold;
+  }
+
+  // Responsive
+  &__mobile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include media-query("lg") {
+      display: none;
+    }
+  }
+}

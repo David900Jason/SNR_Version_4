@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="icon" href="/snr_logo.png" type="image/x-icon" />
+
+    <!-- Setup Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/607e57268c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>SNR</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__img" src="/snr_logo.png" alt="Logo" />
+      </div>
+      <!-- Remove disabled when production -->
+      <ul role="list" class="header__links">
+        <li class="header__link">
+          <a class="header__item" href="/" disabled="disabled">Home</a>
+        </li>
+        <li class="header__link">
+          <a class="header__item" href="./about">About</a>
+        </li>
+        <li class="header__link">
+          <a class="header__item" href="/certification">Certification</a>
+        </li>
+        <li class="header__link">
+          <a class="header__item" href="/training">Training</a>
+        </li>
+        <li class="header__link">
+          <a class="header__item" href="/inspection">Inspection</a>
+        </li>
+        <li class="header__link">
+          <a class="header__item" href="/contact">Contact</a>
+        </li>
+      </ul>
+      <div class="header__mobile" data-collapse="false">
+        <i class="fa-solid fa-2x fa-bars-staggered"></i>
+      </div>
+    </header>
+
+    <!-- Import JS Files -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

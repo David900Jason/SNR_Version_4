@@ -1,0 +1,28 @@
+$font-family: "Open Sans";
+
+// Set Type Scale
+$wght-extrbold: 900;
+$wght-semibold: 800;
+$wght-bold: 600;
+$wght-normal: 400;
+$wght-light: 300;
+
+// Colors
+$main_color: #0f519b;
+$secondary_color: #bf1e2d;
+
+$paragraph_color: #777;
+$paragraph_color2: #fff;
+
+$accent-color: #eee;
+
+// Screen Size map
+$screen-sizes: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+  "xxxl": 1600px,
+)
