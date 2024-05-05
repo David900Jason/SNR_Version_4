@@ -1,1 +1,32 @@
 // button
+.btn {
+  width: 200px;
+  aspect-ratio: 7 / 2;
+  font-size: var(--fz-4);
+  border-radius: 40em;
+  border: none;
+  font-weight: $wght-bold;
+
+  &-primary {
+    background: $main_color;
+    color: white;
+
+    :is(&:hover, &:active) {
+      cursor: pointer;
+    }
+
+    &:hover {
+      background: darken($main_color, 2);
+    }
+
+    &:active {
+      background: darken($main_color, 4);
+    }
+  }
+
+  &-reverse {
+    border: 2px solid $main_color;
+    background-color: transparent;
+    color: $main_color;
+  }
+}
