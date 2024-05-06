@@ -1,0 +1,73 @@
+@use '../globals/' as *;
+
+// Main (Landing)
+.main {
+  min-height: calc(100vh - 12.2rem);
+
+  @include media-query("lg") {
+    min-height: calc(100vh - 10rem);
+  }
+
+  &--bg {
+    background: {
+      image: url("../assets/landing_page.jpg");
+      repeat: no-repeat;
+      position-x: center;
+      size: 100% 100%;
+      attachment: fixed;
+    }
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.6;
+    }
+  }
+
+  @include flex-center("b");
+
+  &__content {
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+
+  &__title {
+    font-weight: $wght-bold;
+    font-size: var(--fz-1);
+
+    span {
+      font-weight: $wght-extrbold;
+
+      &:nth-child(2n) {
+        color: $secondary_color;
+      }
+
+      &:first-child,
+      &:last-child {
+        color: $main_color;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: var(--fz-3);
+    margin-bottom: 1.4em;
+  }
+
+  &__logo-text {
+    letter-spacing: -9px;
+    margin-right: 0.375em;
+
+    @include media-query("lg") {
+      letter-spacing: -13px;
+    }
+  }
+}

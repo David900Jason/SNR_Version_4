@@ -1,0 +1,30 @@
+@use "sass:map";
+@use 'variables' as *;
+
+// Media query mixin
+@mixin media-query($size) {
+  @media (min-width: map.get($screen-sizes, $size)) {
+    @content;
+  }
+}
+
+// Custom media query
+@mixin custom-media($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+// Flex Center
+@mixin flex-center($d) {
+  display: flex;
+
+  @if $d == "x" {
+    justify-content: center;
+  } @else if $d == "y" {
+    align-items: center;
+  } @else if $d == "b" {
+    justify-content: center;
+    align-items: center;
+  }
+}

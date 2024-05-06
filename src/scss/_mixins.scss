@@ -1,8 +1,0 @@
-@use "sass:map";
-
-// Media query mixin
-@mixin media-query($size) {
-  @media (min-width: map.get($screen-sizes, $size)) {
-    @content;
-  }
-}

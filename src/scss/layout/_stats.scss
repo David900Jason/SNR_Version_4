@@ -1,0 +1,57 @@
+@use "../globals/" as *;
+
+.stats {
+  @include flex-center("d");
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 8rem;
+
+  @include media-query("lg") {
+    width: min(92vw, 120rem);
+    margin-inline: auto;
+    justify-content: space-between;
+    flex-direction: row;
+    row-gap: 0;
+  }
+
+  & > :first-child {
+    flex-basis: 100%;
+    margin-bottom: 8rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    
+    @include media-query("lg") {
+      flex-direction: row;
+      text-align: center;
+    }
+
+    &__icon {
+      color: $main_color;
+    }
+
+    &__info {
+      text-align: center;
+    }
+
+    &__number {
+      font-weight: $wght-light;
+      letter-spacing: -5px;
+      text-align: center;
+      line-height: 10rem;
+      font-size: 10rem;
+    }
+
+    &__name {
+      font-size: var(--fz-4);
+      font-weight: $wght-bold;
+      color: $main_color;
+      margin-left: 10px;
+      text-align: center;
+    }
+  }
+}

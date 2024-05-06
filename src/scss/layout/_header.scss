@@ -1,0 +1,118 @@
+@use '../globals/' as *;
+
+// Header
+.header {
+  background-color: $accent_color;
+  padding-inline: min(12rem, 5vw);
+  padding-block: 3.2em;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3.2em;
+
+  z-index: 99;
+
+  @include media-query("lg") {
+    flex-direction: row;
+    padding-block: 0;
+    justify-content: space-between;
+    height: 10rem;
+  }
+
+  // Logo
+  &__logo {
+    width: 85px;
+    @include flex-center("y");
+  }
+
+  // Links
+  &__links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 99;
+    width: 100%;
+    transform: translateX(50%);
+    flex: 1;
+
+    @include media-query("lg") {
+      flex-direction: row;
+      position: static;
+      transform: none;
+      justify-content: end;
+      height: 100%;
+      gap: 3.2rem;
+    }
+  }
+
+  // Link
+  &__link {
+    $p: 2.5em;
+
+    position: relative;
+    text-align: center;
+    padding-block: $p;
+    @include flex-center("x");
+    transform: translateX(100%);
+    transition: 300ms all ease;
+
+    background-color: $main_color;
+    color: white;
+
+    &:hover {
+      color: $secondary_color;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: $main_color;
+      transition: height 300ms;
+    }
+
+    @include media-query("lg") {
+      align-items: center;
+      justify-content: unset;
+      background-color: transparent;
+      color: inherit;
+      padding-inline: 1.6em;
+      transform: translateX(0);
+
+      &:hover {
+        padding-block: 2.25em;
+        color: $main_color;
+        cursor: pointer;
+
+        &::before {
+          height: 5px;
+        }
+      }
+    }
+  }
+
+  // Link
+  &__item {
+    font-size: var(--fz-5);
+    font-weight: $wght-bold;
+  }
+
+  // Responsive
+  &__mobile {
+    @include flex-center("y");
+    cursor: pointer;
+
+    @include media-query("lg") {
+      display: none;
+    }
+  }
+}

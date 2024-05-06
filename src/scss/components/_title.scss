@@ -1,0 +1,55 @@
+@use '../globals/' as *;
+
+.title {
+  position: relative;
+  padding-bottom: min(3vh, 3rem);
+  margin-bottom: 3.2rem;
+
+  @include media-query("lg") {
+    padding-inline: 0;
+  }
+
+  &.red {
+    --color: #{$secondary_color};
+  }
+
+  &.blue {
+    --color: #{$main_color};
+  }
+
+  &.center {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  
+  h2 {
+    position: relative;
+    font-size: var(--fz-1);
+    font-weight: 800;
+    letter-spacing: -5px;
+    width: fit-content;
+    margin-inline: auto;
+
+    @include media-query("lg") {
+      margin-left: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -3.2rem;
+      left: 50%;
+      width: 55%;
+      height: 7px;
+      transform: translateX(-50%);
+      background-color: var(--color);
+  
+      @include media-query("lg") {
+        left: 3.6rem;
+        transform: translateX(0);
+      }
+    }
+  }
+}

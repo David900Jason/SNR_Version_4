@@ -1,0 +1,75 @@
+@use '../globals/' as *;
+
+// Cards
+.cards {
+  width: fit-content;
+  padding-inline: 10px;
+  display: grid;
+  row-gap: 10rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+  @include media-query("xs") {
+    margin-inline: auto;
+  }
+
+  @include media-query("lg") {
+    width: min(92vw, 120rem);
+    gap: 10rem 4rem;
+  }
+
+  .card {
+    --text: var(--fz-5);
+
+    height: auto;
+
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 2px 2px $accent_color;
+    border-radius: $brs;
+    padding-bottom: max(8vh, 5rem);
+    padding-top: 9rem;
+    padding-inline: 0;
+    display: grid;
+    gap: 2rem;
+
+    transition: 500ms ease transform;
+    background-color: #fff;
+
+    @include custom-media(1230px) {
+      transform: translateY(-25rem);
+    }
+
+    &__icon {
+      position: absolute;
+      @include flex-center("b");
+      top: -4.75rem;
+      left: 50%;
+      width: 45px;
+      aspect-ratio: 1 / 1;
+      transform: translateX(-50%);
+
+      box-shadow: 0 0 0 0 $accent-color;
+
+      background-color: $main_color;
+      border-radius: 50%;
+      padding: 2.35rem;
+      color: white;
+    }
+
+    &__title {
+      color: $secondary_color;
+    }
+
+    &__text {
+      font-size: var(--text);
+      text-align: center;
+      color: $paragraph_color;
+      max-width: 45ch;
+      margin: 0 auto;
+
+      @include media-query("lg") {
+        max-width: 32ch;
+      }
+    }
+  }
+}

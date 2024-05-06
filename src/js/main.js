@@ -2,7 +2,6 @@
 import "../scss/styles.scss";
 
 // Put a transform of 10px once on all menu-items
-const menu = document.querySelector(".header__links");
 const menuLinks = document.querySelectorAll(".header__link");
 const mobileMenu = document.querySelector(".header__mobile");
 
@@ -33,3 +32,25 @@ function staggeringAnimation(elements, reverse) {
     element.style.transition = transition.replace("*", i * 100); // Replace * with delay
   });
 }
+
+// Stop scrolling animation
+const cards = document.querySelectorAll(".cards .card");
+
+window.onscroll = () => {
+  // Get page scrolling value
+  const pageScroll = window.scrollY;
+
+  if (window.innerWidth > 1230) {
+    if (pageScroll >= 175) {
+      cards.forEach((c) => {
+        c.style.transform = "translateY(0)";
+      });
+    }
+
+    if (pageScroll < 200 || window.innerWidth <= 1230) {
+      cards.forEach((c) => {
+        c.style.transform = "translateY(-25rem)";
+      });
+    }
+  }
+};

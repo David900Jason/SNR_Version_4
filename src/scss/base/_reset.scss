@@ -1,3 +1,5 @@
+@use "../globals" as *;
+
 /* Box sizing rules */
 * {
   &::before,
@@ -56,6 +58,11 @@ body {
   font-family: $font-family, sans-serif;
   min-height: 100vh;
   line-height: 1.5;
+}
+
+/* */
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -99,5 +106,37 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+h1 {
+  // font-family: $font-family;
+  // font-weight: $wght-extrbold;
+  font-size: var(--fz-1);
+}
+
+h2 {
+  // font-family: $font-family;
+  // font-weight: $wght-bold;
+  font-size: var(--fz-2);
+}
+
+h3 {
+  // font-family: $font-family;
+  // font-weight: $wght-bold;
+  font-size: var(--fz-3);
+}
+
+p {
+  // font-family: $font-family;
+  // font-weight: $wght-light;
+  font-size: var(--fz-5);
+}
+
+section {
+  margin-block: 20rem;
+
+  @include media-query("sm") {
+    margin-top: 10rem;
   }
 }

@@ -1,0 +1,31 @@
+@use '../globals/' as *;
+
+.about-us {
+  margin-inline: auto;
+  text-align: center;
+
+  @include media-query("lg") {
+    width: min(92vw, 120rem);
+    text-align: start;
+  }
+
+  p {
+    font-size: var(--fz-5);
+    max-width: 75ch;
+    line-height: 2;
+    color: $paragraph_color;
+    
+    @include media-query("xs") {
+      margin-inline: 20px;
+    }
+
+    @include custom-media(600px) {
+      margin-inline: auto;
+    }
+
+    @include media-query("lg") {
+      margin-inline: 0;
+      font-size: var(--fz-4)
+    }
+  }
+}
