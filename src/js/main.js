@@ -54,3 +54,40 @@ window.onscroll = () => {
     }
   }
 };
+
+// Tab Change
+const test_users = document.querySelectorAll("[data-index]");
+const test_card = document.querySelector(".test__card");
+
+test_users.forEach((t) => {
+  t.addEventListener("click", async (e) => {
+    let dataIndex = e.target.dataset.index;
+    let index = 0;
+    switch (dataIndex) {
+      case "john":
+        index = 0;
+        break;
+      case "maya":
+        index = 1;
+        break;
+      case "ahmed":
+        index = 2;
+        break;
+      case "daniel":
+        index = 3;
+        break;
+      default:
+        break;
+    }
+
+    try {
+      const response = await fetch("../data/clients.json");
+      let data = await response.json();
+      test_card.innerHTML = `
+        ${data["users"][index]["description"]}
+      `;
+    } catch (err) {
+      console.log(err);
+    }
+  });
+});

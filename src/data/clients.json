@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "user": "John Doe",
+      "job_title": "Web developer",
+      "description": "<div class=\"test__img test__user\"><div class=\"test__avatar\"><img src=\"./assets/avatar.png\" alt=\"\" /></div><div class=\"test__data\"><p>John Doe</p><span>Web developer</span></div></div><hr /><p>The website is incredibly user-friendly! I was able to find exactly what I was looking for quickly and easily. The layout is clean and organized, and the visuals are engaging. It kept me interested and wanting to explore more.</p>"
+    },
+    {
+      "user": "Maya Kim",
+      "job_title": "Web designer",
+      "description": "<div class=\"test__img test__user\"><div class=\"test__avatar\"><img src=\"./assets/avatar-2.png\" alt=\"\" /></div><div class=\"test__data\"><p>Maya Kim</p><span>Web designer</span></div></div><hr /><p>I was impressed by the depth of information on the website. It answered all my questions and provided valuable insights on the topic. It seems like you've really thought about what users might be looking for and addressed it comprehensively.</p>"
+    },
+    {
+      "user": "Ahmed Khan",
+      "job_title": "Mobile Developer",
+      "description": "<div class=\"test__img test__user\"><div class=\"test__avatar\"><img src=\"./assets/avatar-3.png\" alt=\"\" /></div><div class=\"test__data\"><p>Ahmed Khan</p><span>Mobile Developer</span></div></div><hr /><p>The overall feel of the website is professional and trustworthy. The design is polished, and the content is well-written. It instills confidence in the company and the services offered.</p>"
+    },
+    {
+      "user": "Daniel Rodriguez",
+      "job_title": "Mobile Developer",
+      "description": "<div class=\"test__img test__user\"><div class=\"test__avatar\"><img src=\"./assets/avatar-4.png\" alt=\"\" /></div><div class=\"test__data\"><p>Daniel Rodriguez</p><span>Cybersecurity Eng.</span></div></div><hr /><p>I love that the website is so mobile-friendly! I often browse websites on my phone, and this one is easy to navigate and read on a smaller screen. It adapts seamlessly, providing a great user experience across devices.</p>"
+    }
+  ]
+}

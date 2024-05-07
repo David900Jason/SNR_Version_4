@@ -1,0 +1,143 @@
+@use "../globals/" as *;
+
+.testimonials {
+  margin-inline: auto;
+  text-align: center;
+
+  @include media-query("lg") {
+    width: min(92vw, 120rem);
+    text-align: start;
+  }
+
+  img {
+    width: 4rem;
+    height: 5rem;
+    padding: 1rem;
+    background-color: darken($main_color, 7);
+    border-radius: 50%;
+    gap: 2rem;
+  }
+
+  .test {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include media-query("lg") {
+      flex-direction: row-reverse;
+    }
+
+    &__users {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 7rem;
+      margin-inline: 1rem;
+      gap: 2rem;
+
+      @include media-query("lg") {
+        margin-inline: 0;
+      }
+      overflow-x: auto;
+      row-gap: 1rem;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      background-color: $main_color;
+      padding: 1rem;
+      border-radius: 50px;
+      gap: 1.6rem;
+      min-width: 26rem;
+    }
+
+    &__data {
+      p {
+        font-size: var(--fz-4);
+        font-weight: $wght-bold;
+        color: white;
+      }
+
+      span {
+        font-size: var(--fz-4) - 15px;
+        text-align: left;
+        display: block;
+        color: #777;
+      }
+    }
+
+    &__text {
+      display: grid;
+      gap: 2rem;
+
+      @include media-query("sm") {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      :is(h3, p) {
+        margin-inline: auto;
+      }
+
+      h3 {
+        max-width: 30ch;
+      }
+      p {
+        max-width: 52ch;
+        line-height: 1.8;
+
+        @include media-query("lg") {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__img {
+      color: black;
+      border-radius: $brs;
+      margin-bottom: 2rem;
+
+      img {
+        border-radius: $brs;
+      }
+
+      p {
+        font-size: var(--fz-4) !important;
+        margin-top: 0 !important;
+        line-height: auto !important;
+        font-weight: $wght-bold;
+        color: white;
+      }
+    }
+
+    &__card {
+      background: #eee;
+      padding: 2rem;
+      border-radius: $brs;
+      max-width: 50rem;
+      min-height: 50rem;
+      margin-inline: auto;
+
+      @include media-query("lg") {
+        min-height: 50rem;
+        margin-left: 0;
+      }
+
+      p {
+        font-size: var(--fz-5);
+        margin-inline: auto;
+        margin-top: 2rem;
+        max-width: 50ch;
+        line-height: 1.8;
+      }
+    }
+  }
+}
