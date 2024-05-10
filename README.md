@@ -101,4 +101,4 @@ This website is responsive for all screen sizes.
 
 I used **Lighthouse** to test the performance of the website.
 
-<img src="./design/Untitled.png" />
+<img src="./design/Lighthouse.png" />
