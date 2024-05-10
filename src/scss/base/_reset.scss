@@ -57,6 +57,7 @@ html {
 body {
   font-family: $font-family, sans-serif;
   min-height: 100vh;
+  overflow: hidden;
   line-height: 1.5;
 }
 
@@ -110,31 +111,30 @@ select {
 }
 
 h1 {
-  // font-family: $font-family;
-  // font-weight: $wght-extrbold;
   font-size: var(--fz-1);
 }
 
 h2 {
-  // font-family: $font-family;
-  // font-weight: $wght-bold;
   font-size: var(--fz-2);
 }
 
 h3 {
-  // font-family: $font-family;
-  // font-weight: $wght-bold;
   font-size: var(--fz-3);
 }
 
 p {
-  // font-family: $font-family;
-  // font-weight: $wght-light;
   font-size: var(--fz-5);
 }
 
 section {
   margin-block: 20rem;
+  margin-inline: auto;
+  text-align: center;
+
+  @include media-query("lg") {
+    width: min(92vw, 120rem);
+    text-align: start;
+  }
 
   @include media-query("sm") {
     margin-top: 10rem;

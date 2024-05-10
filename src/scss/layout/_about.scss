@@ -1,14 +1,6 @@
 @use '../globals/' as *;
 
 .about-us {
-  margin-inline: auto;
-  text-align: center;
-
-  @include media-query("lg") {
-    width: min(92vw, 120rem);
-    text-align: start;
-  }
-
   p {
     font-size: var(--fz-5);
     max-width: 75ch;

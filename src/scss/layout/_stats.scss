@@ -7,8 +7,6 @@
   row-gap: 8rem;
 
   @include media-query("lg") {
-    width: min(92vw, 120rem);
-    margin-inline: auto;
     justify-content: space-between;
     flex-direction: row;
     row-gap: 0;
@@ -24,7 +22,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    
+
     @include media-query("lg") {
       flex-direction: row;
       text-align: center;

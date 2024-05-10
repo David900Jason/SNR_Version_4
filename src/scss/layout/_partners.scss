@@ -1,16 +1,8 @@
 @use '../globals/' as *;
 
 .partners {
-  margin-inline: auto;
-  text-align: center;
-
   .title {
     margin-bottom: 8rem;
-  }
-
-  @include media-query("lg") {
-    width: min(92vw, 120rem);
-    text-align: start;
   }
 
   &__imgs {

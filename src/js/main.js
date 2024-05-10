@@ -1,5 +1,6 @@
 // Import our custom CSS
 import "../scss/styles.scss";
+import "../data/clients.json";
 
 // Put a transform of 10px once on all menu-items
 const menuLinks = document.querySelectorAll(".header__link");
@@ -89,5 +90,16 @@ test_users.forEach((t) => {
     } catch (err) {
       console.log(err);
     }
+  });
+});
+
+// Rotate Icon
+const contactItems = document.querySelectorAll("[data-item]");
+const openIcon = document.querySelector(".drag-menu");
+
+openIcon.addEventListener("click", () => {
+  openIcon.classList.toggle("open");
+  contactItems.forEach((item) => {
+    item.classList.toggle("show");
   });
 });

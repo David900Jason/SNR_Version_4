@@ -1,12 +1,12 @@
-@use '../globals/' as *;
+@use "../globals/" as *;
 
 // Cards
 .cards {
   width: fit-content;
-  padding-inline: 10px;
   display: grid;
-  row-gap: 10rem;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding-inline: 10px;
+  row-gap: 10rem;
 
   @include media-query("xs") {
     margin-inline: auto;

@@ -1,0 +1,47 @@
+@use '../globals/' as *;
+
+.footer {
+  background-color: $main_color;
+  padding: 4rem;
+  padding-block: 10rem;
+  color: white;
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #000;
+  }
+
+  &__link {
+    background-color: darken($main_color, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.75rem;
+    box-shadow: 0 0 2px 0 #eee;
+    border-radius: 6px;
+    opacity: .6;
+    transition: opacity 300ms;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    i {
+      width: 3rem;
+      aspect-ratio: 1 / 1;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    padding-top: 4rem;
+    text-align: center;
+    font-size: 2rem;
+
+    p { font: inherit }
+  }
+}
